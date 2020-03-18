@@ -152,7 +152,7 @@ h5 {
 h6 {
     font-size: var(--step-1);
 }
-p, ul, a, blockquote, footer {
+p, ul, a, blockquote, footer, form {
     font-family: var(--font-family);
     font-size: var(--step--1);
     line-height: 1.5;
@@ -167,7 +167,7 @@ p, ul, a, blockquote, footer {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  }
+}
   .hero-text {
     text-align: center;
     position: absolute;
@@ -175,7 +175,7 @@ p, ul, a, blockquote, footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  }
+}
 /* NAVBAR SPECIFIC */
 /* The Overlay (background) */
 .navbar {
@@ -194,32 +194,32 @@ p, ul, a, blockquote, footer {
     background-color: rgba(0,0,0, 0.9); 
     overflow-x: hidden; 
     transition: 0.5s;
-  }
-  .overlay-content {
+}
+.overlay-content {
     font-weight: lighter;
     position: relative;
     top: 25%; 
     width: 100%; 
     text-align: center; 
     margin-top: 30px; 
-  }
-  .overlay a {
+}
+.overlay a {
     padding: 8px;
     text-decoration: none;
     color:rgba(247, 244, 91, 1);
     display: block; 
     transition: 0.3s; 
-  }
-  .overlay a:hover, .overlay a:focus {
+}
+.overlay a:hover, .overlay a:focus {
     color: rgba(0, 74, 224, 1);
-  }
-  .overlay .closebtn {
+}
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 40px;
     color: rgba(255, 255, 255, 1);
-  }
+}
 .hero-section {
     width: 100%;
     height: 100vh;

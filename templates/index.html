@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="jumbotron">
+                <div class="jumbotron mt-3">
                     <h1 class="display-4">Hello, {{ user.username }}!</h1>
                     <p class="lead">A warm welcome back to your blog Content Management System Centre. We're so happy you've made it back to post another great blog.</p>
                     <hr class="my-4">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Write a new blog</a>
+                    <a class="btn btn-primary btn-lg" href="/addblog" role="button">Write a new blog</a>
                   </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
     {% for post in posts %}
     <div class="container">
         <div class="row">
-            <div class="col-12 m-3">
+            <div class="col-10 mx-auto my-3">
                 <div class="card text-center">
                     <div class="card-header">
                         {{ post.title }}
@@ -27,7 +27,10 @@
                     </div>
                     <div class="card-footer text-muted">
                         {{ post.tag_name}}
-                        {{ post.slug }}
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-info">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
@@ -16,13 +16,13 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <!-- Overlay content -->
                 <div class="overlay-content">
-                    <a href="/index.html">Home</a>
-                    <a href="/contact.html">Contact</a>
-                    <a href="/about.html">About 'A cup of Yoga'</a>
+                    <a href="/index">Home</a>
+                    <a href="/addblog">Blog</a>
+                    <a href="/about">About 'A cup of Yoga'</a>
                 </div>
             </div>
             <!-- Use any element to open/show the overlay navigation menu -->
-            <a class="navbar-brand" href="/index.html"><img src="/static/img/yoga_icon.svg" width="40px"/></a>
+            <a class="navbar-brand" href="/index"><img src="/static/img/yoga_icon.svg" width="40px"/></a>
             <span onclick="openNav()"><img src="/static/img/menu_icon.svg" width="40px"/></span>
         </nav>
     </header>
@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="display-1">A Cup of Yoga</h1>
+                        <h1 class="display-md-1">A Cup of Yoga</h1>
                         <h3>A personal Yoga and wellbeing blog by Wayne Pegg</h3>
                     </div>
                 </div>
