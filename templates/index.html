@@ -8,11 +8,12 @@
                     <h1 class="display-4">Hello, {{ user.username }}!</h1>
                     <p class="lead">A warm welcome back to your blog Content Management System Centre. We're so happy you've made it back to post another great blog.</p>
                     <hr class="my-4">
-                    <a class="btn btn-primary btn-lg" href="/addblog" role="button">Write a new blog</a>
+                    <a class="btn btn-primary btn-lg" href="/insertBlog" role="button">Write a new blog</a>
                   </div>
             </div>
         </div>
     </div>
+    <h2>Your current blogs are listed below:</h2>
     {% for post in posts %}
     <div class="container">
         <div class="row">
@@ -29,8 +30,12 @@
                         {{ post.tag_name}}
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-info">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <a href="{{ url_for('editBlog', blog_id=post._id) }}">
+                            <button type="button" class="btn btn-info">Edit</button>
+                        </a>
+                        <a href="{{ url_for('remove', blog_id=post._id) }}">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
                     </div>
                 </div>
             </div>
