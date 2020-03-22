@@ -2,7 +2,9 @@
 
 @font-face {
     font-family: 'Kiona-Regular';
-    src: url("/static/fonts/KIONA-Regular.ttf") format("ttf");
+    src: url("/static/fonts/KIONA-Regular.ttf") format("ttf"),
+        url("/static/fonts/KIONA-Regular.woff") format("woff"),
+        url("/static/fonts/KIONA-Regular.woff2") format("woff2");
 }
 
 :root {

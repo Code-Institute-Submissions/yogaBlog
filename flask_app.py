@@ -53,4 +53,4 @@ def updateBlog(blog_id):
 
 @app.route("/cancel")
 def cancel():
-    return redirect()
+    return redirect("/")

@@ -16,13 +16,12 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <!-- Overlay content -->
                 <div class="overlay-content">
-                    <a href="/index">Home</a>
-                    <a href="/addblog">Blog</a>
-                    <a href="/about">About 'A cup of Yoga'</a>
+                    <a href="{{url_for('getBlogs')}}">Home</a>
+                    <a href="{{url_for('insertBlogDisplay')}}">Add a Blog</a>
                 </div>
             </div>
             <!-- Use any element to open/show the overlay navigation menu -->
-            <a class="navbar-brand" href="/index"><img src="/static/img/yoga_icon.svg" width="40px"/></a>
+            <a class="navbar-brand" href="{{url_for('getBlogs')}}"><img src="/static/img/yoga_icon.svg" width="40px"/></a>
             <span onclick="openNav()"><img src="/static/img/menu_icon.svg" width="40px"/></span>
         </nav>
     </header>
@@ -31,8 +30,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="display-md-1">A Cup of Yoga</h1>
-                        <h3>A personal Yoga and wellbeing blog by Wayne Pegg</h3>
+                        <h1 class="display-1 text-white">A Cup of Yoga</h1>
+                        <h3 class="text-white">A personal Yoga and wellbeing blog by Wayne Pegg</h3>
                     </div>
                 </div>
             </div>
