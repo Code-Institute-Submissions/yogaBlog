@@ -1,11 +1,11 @@
 import os
 from flask import Flask, render_template, redirect, url_for, request
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
+from datetime import datetime
 
 
 app = Flask(__name__)
-#app.config["MONGO_URI"] = "mongodb+srv://Blogger:Blogger@yogacluster-kiw6r.mongodb.net/yogaBlog?retryWrites=true&w=majority"
 
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 @app.route('/index')
 def getBlogs():
     user = {'username': 'Wayne'}
-    return render_template('index.html', title="Home", user=user, posts=mongo.db.blogEntries.find(), tags=mongo.db.tagHeadings.find())
+    return render_template('index.html', title="Home", user=user, posts=mongo.db.blogEntries.find().sort([('time_stamp', DESCENDING)]), tags=mongo.db.tagHeadings.find())
 
 @app.route('/insertBlog')
 def insertBlogDisplay():
@@ -28,8 +28,8 @@ def insertBlog():
     article_text = request.values.get("article_text")
     tag_name = request.values.get("tag_name")
     author_name = request.values.get("author_name")
-
-    mongo.db.blogEntries.insert({"title":title, "article_text":article_text, "tag_name":tag_name, "author_name":author_name})
+    time_of_blog = datetime.now()
+    mongo.db.blogEntries.insert({"title":title, "article_text":article_text, "tag_name":tag_name, "author_name":author_name, "time_stamp":time_of_blog})
     return redirect("/index")
 
 @app.route("/remove/<blog_id>")    
