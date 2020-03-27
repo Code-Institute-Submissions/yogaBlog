@@ -162,6 +162,9 @@ p, ul, a, blockquote, footer, form {
 .card {
     font-family: var(--font-family);
 }
+.card-text {
+    
+}
 .hero-image {
     background-image: linear-gradient(rgba(199, 198, 196, 0.5), rgba(68, 68, 67, 0.5)), url("/static/img/yoga1.jpg");
     height: 80%;
