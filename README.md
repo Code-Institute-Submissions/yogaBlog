@@ -56,18 +56,46 @@ To host this Flask/MongoDB project use was made of [Python Anywhere](www.pythona
 
 Testing for this project was conducted in the 'shoes' of an actual user. That is, all possible options and scenario's were completed as detailed below:
 
-1) Landing page
+1. Landing page
 
 - Ensured the image, font size and sign-in/sign out buttons were rendered correctly for all responsive device types and orientations
+- Ensured each blog entry that should be presented is presented in the correct date/time order and with the correct 'Edit' & 'Delete' buttons.
+- Ensured that the specific 'Edit' and 'Delete' button assigned to a specific blog edits and deletes the correct blog article.
+- When the Flask app is run, connection to the MongoDB Atlas Cluster is established for read/write purposes.
 
+2. Writing a blog article
+
+-Ensured the form fields were displayed correctly.
+-Ensured values typed into fields are written to the specific MongoDB blogEntries fields values correctly.
+-Ensured sent values were saved into the correct fields on the MongoDB blogEntries collection.
+-Ensured once submitted the user is returned to the original cms landing page with the most recent blog article positioned at the top of the list and descending in date/time order
+-Ensured if user selects the cancel button, nothing is written to the MongoDB collection blogEntries
+-Ensured if user selects cancel, user returns to main cms landing page.
+
+3. Editing a blog article
+
+- Ensured all blog articles listed are presented to the user with the Edit button option.
+- Ensured that when the Edit button for a specific blog article is selected, the correct text and format are supplied to the user in the corrrect form fields.
+- When a change has occured to one or many of each specific fields and the user selects 'Submit' that the changes are made to the relevant blog article.
+- When the aboves changes have been made and saved correctly to the MongoDB blogEntries collections, these are reflected and saved correctly in the correctly field value and displayed to the user with the corrections made on the main landing page.
+
+4. Deleting a blog article
+
+- Ensured that each specific blog article has presented a 'Delete' button option for the user.
+- Ensured that when selected, the article that should be deleted from the MongoDB blogEntries collection is deleted and nothing else.
+- Ensured when the 'Delete' button has been selected, the user is returned to the main landing CMS page with the deleted blog not appearing in the current list of blog articles.
 
 ## Deployment
 
 This project was saved the following repository on [Github: Peggy535/yogaBlog](https://github.com/Peggy535/yogaBlog).
 
-There were not differences within configuration files nor any branches constructed. 
+There were not differences within configuration files nor any branches constructed. Several git commands were used thoroughly and throughout the project lifecycle. the commands used for this were:
+
+git add ./git commit -m "Meaningful message to reflect the commit"/git push -u origin master.
 
 The projects site was deployed to the following site address, [click here](http://peggy535.pythonanywhere.com/).
+
+In order to set up this Flask project, I registered as a new user of Python Anywhere. Once I had established this I then created and deployed a virtual environment and installed Flask and other dependencies such as PyMongo and dotenv. Once this was done I simply uploaded my project file/folder structure and configured the associated WSGI.py file that is associated with this project and virtual environment.
 
 ## Credits
 
