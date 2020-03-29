@@ -95,7 +95,7 @@ git add ./git commit -m "Meaningful message to reflect the commit"/git push -u o
 
 The projects site was deployed to the following site address, [click here](http://peggy535.pythonanywhere.com/).
 
-In order to set up this Flask project, I registered as a new user of Python Anywhere. Once I had established this I then created and deployed a virtual environment and installed Flask and other dependencies such as PyMongo and dotenv. Once this was done I simply uploaded my project file/folder structure and configured the associated WSGI.py file that is associated with this project and virtual environment.
+In order to set up this Flask project, I registered as a new user of Python Anywhere. Once I had established this I then created and deployed a virtual environment and installed Flask and other dependencies such as PyMongo and dotenv. Once this was done I simply uploaded my project file/folder structure and configured the associated WSGI.py file that is associated with this project and virtual environment. This was then deployed and is currently live and available at the above site address.
 
 ## Credits
 
