@@ -4,7 +4,7 @@ A Cup of Yoga is my submission for the third assessment of four projects for the
 
 This site is currently published on the following link:
 
-[A Cup of Yoga](http://peggy535.pythonanywhere.com/)(github repo: https://github.com/Peggy535/yogaBlog)
+[A Cup of Yoga](http://peggy535.pythonanywhere.com/) (github repo: https://github.com/Peggy535/yogaBlog)
 
 This imitation Content Management System for a blog site has been built to be responsive to, and for any device type. Please also note, for this project no user authentication has been added. The focus of this project has been to perform CRUD operations using the Flask framework with MongoDB Atlas.
 
@@ -36,14 +36,21 @@ Cluster name: YogaCluster
 Collections: blogEntries
 Fields for blogEntries: _id, title, article_text, tag_name, author_name, time_of_blog
 
-All apart from '''json {_id and time_of_blog}
+All apart from _id and time_of_blog, are inputted by the user of the blog CMS.
 
+'_id' is the specific and unique primary key created by MongoDb, 'time_of_blog' is a time stamp that is created when the user submits a new blog article. It is this DB field value that is used to predicate and sort the blog articles into descending order for the user.
+
+The connection string that is used to connect to the MongoDB Cluster is stored within a '.env' file that has been included in the sites .gitignore file.
+
+Connection from the Flask project to the MongoDB database is made using PyMongo importing the 'MONGO_URI' connection string as detailed above.
 
 ## Technologies used
 
 The project has made use of the following technologies;
 
 HTML5, CSS3, Bootstrap 4, Javascript, Python, Flask, MongoDB.
+
+To host this Flask/MongoDB project use was made of [Python Anywhere](www.pythonanywhere.com).
 
 ## Testing
 
@@ -56,18 +63,17 @@ Testing for this project was conducted in the 'shoes' of an actual user. That is
 
 ## Deployment
 
-This project was saved the following repository on [Github Peggy535/Cryptograph](https://github.com/Peggy535/Cryptograph).
+This project was saved the following repository on [Github: Peggy535/yogaBlog](https://github.com/Peggy535/yogaBlog).
 
 There were not differences within configuration files nor any branches constructed. 
 
-The projects site was deployed to the following site address, [click here](https://peggy535.github.io/Cryptograph/).
+The projects site was deployed to the following site address, [click here](http://peggy535.pythonanywhere.com/).
 
 ## Credits
 
 Content
 
-- Thanks and acknowledgment is given to [Cryptodatadownload.com](http://www.cryptodatadownload.com/) for their excellent `.csv` data files used in this project.
-- dc.js, d3.js and crossfilter communities for the content and API documentation references on Github.
+- Thanks and acknowledgment is given to Real Python, Front End Masters & MongoDB University.
 
 Acknowledgements
 
